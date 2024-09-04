@@ -1,0 +1,95 @@
+@import url('typography.css');
+@import url('layout.css');
+@import url('colors.css');
+
+/* Base style */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: white;
+    background-color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Hide all sections by default */
+section.post-content {
+    display: none;
+}
+
+/* Show the section that matches the ID in the URL */
+section:target {
+    display: block;
+}
+
+/* Style for the blog images */
+.post-content img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
